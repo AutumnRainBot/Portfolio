@@ -3,60 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Game Dev</title>
+  <title>Portfolio | Rainbot</title>
   <style>
+    :root {
+      --bg: #121212;
+      --accent: #7f5af0;
+      --text: #f1f1f1;
+      --muted: #888;
+      --card: #1e1e1e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #0e0e0e;
-      color: #f1f1f1;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
+
     header {
-      background: #1a1a1a;
-      padding: 2rem;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #1f1f1f, #282828);
     }
+
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: #00ffaa;
+      font-size: 3rem;
+      color: var(--accent);
     }
+
     header p {
+      color: var(--muted);
       font-style: italic;
-      color: #aaa;
+      margin-top: 0.5rem;
     }
+
     section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
     }
+
+    h2 {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+
     .project {
-      background: #1c1c1c;
-      margin: 1rem 0;
+      background-color: var(--card);
+      margin: 1.5rem 0;
       padding: 1.5rem;
-      border-left: 5px solid #00ffaa;
-      border-radius: 10px;
+      border-radius: 12px;
+      transition: transform 0.2s ease;
     }
-    .project h2 {
-      margin-top: 0;
-      color: #00ffaa;
+
+    .project:hover {
+      transform: scale(1.02);
     }
+
+    .project h3 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
     .project p {
-      color: #ccc;
+      color: var(--muted);
     }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: '✓';
+      color: var(--accent);
+      margin-right: 0.5rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
-      color: #777;
+      color: var(--muted);
       font-size: 0.9rem;
-    }
-    a {
-      color: #00ffaa;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -69,39 +114,33 @@
   <section>
     <h2>À propos de moi</h2>
     <p>
-      Salut ! Je suis un développeur de jeux indépendant spécialisé dans la création d'expériences uniques sur Roblox,
-      immersives et fun. Que ce soit des : Simulator , Tycoon , Aventure , je transforme mes idées en jeux jouables.
+      Développeur de jeux indépendant passionné par la création de projets atypiques sur Roblox : Simulator, Tycoon, aventure délirante... J'aime expérimenter et repousser les limites du possible.
     </p>
 
     <h2>Projets récents</h2>
 
     <div class="project">
-      <h2>Grow a cotton field</h2>
-      <p>Un jeu basé sur l'ésclavage des noires et le farming de cotton (jeu historique).</p>
-      <p><a href="#">Voir le projet</a></p>
+      <h3>El Mordjene Hangout</h3>
+      <p>Un hub communautaire chill pour les amateurs de pâtes, de mèmes et de potes. Serveur vocal intégré, animations, easter eggs.</p>
+      <p><a href="https://www.roblox.com/games/116178262982427/El-Mordjene-Hangout">Voir sur Roblox</a></p>
     </div>
 
     <div class="project">
-      <h2>El Mordjene hangout</h2>
-      <p>Un jeu Roblox qui a pour but de rassembler des jeunes passionés par la pate.</p>
-      <p><a href="https://www.roblox.com/games/116178262982427/El-Mordjene-Hangout">Découvrir sur Roblox</a></p>
-    </div>
-
-    <div class="project">
-      <h2>[🍎] Steal a Farmer</h2>
-      <p>Un jeu de contruction de champs et d'utilisation intensive de farmeurs sous payé.</p>
-      <p><a href="https://www.roblox.com/games/74770347515194/Steal-a-Farmer">En savoir plus</a></p>
+      <h3>[🍎] Steal a Farmer</h3>
+      <p>Un simulateur de gestion exploitant le concept d'automatisation et de productivité... à l'extrême. Humour noir garanti.</p>
+      <p><a href="https://www.roblox.com/games/74770347515194/Steal-a-Farmer">Découvrir</a></p>
     </div>
 
     <h2>Compétences</h2>
     <ul>
       <li>Reverse Engineering</li>
-      <li>C++/C/C# Windows App</li>
-      <li>Logiciel de cheat</li>
+      <li>C++, C, C#, Lua (Roblox)</li>
+      <li>Développement de logiciels internes / cheats éducatifs</li>
+      <li>UI/UX, Level Design, optimisation réseau</li>
     </ul>
 
     <h2>Contact</h2>
-    <p>🌐 <a href="https://github.com/AutumnRainBot/">Mon GitHub</a>
+    <p>🌐 <a href="https://github.com/AutumnRainBot/">GitHub</a></p>
   </section>
 
   <footer>
